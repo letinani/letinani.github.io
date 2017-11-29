@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <title>Letinani Christmas XP</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
+  <title>Letinani Christmas XP</title>
   <style>
     body, html {
       margin: 0;
@@ -31,10 +32,10 @@
       display: inline-block;
       margin: 10px;
       padding: 10px 25px;
-      background: rgba(255, 255, 255, 0.4 );
+      background: white;
       border-radius: 3px;
-      border-bottom: 4px solid rgba(100, 100, 100, 0.9);
-      transition: all 200ms linear;
+      position: relative;
+      z-index: 10;
     }
 
     .Tuto-notes .Tuto-keyboard p {
@@ -43,8 +44,7 @@
       margin: 0;
     }
     .Tuto .is-pressed {
-      background: rgba(255, 255, 255, 1);
-      border-bottom: 0px solid rgba(100, 100, 100, 0.8);
+      background: rgba(255, 255, 255, 0.5);
     }
 
     .Tuto-title svg {
@@ -88,6 +88,26 @@
 
     .TutoBtn--open .TutoBtn-help {
       display: none;
+    }
+
+    @media screen and (max-width: 640px) {
+      .TutoBtn {
+        display: none;
+      }
+      .Tuto {
+        display: block;
+        position: absolute;
+        top: 5%;
+        width: 100%;
+      }
+
+      .Tuto-title svg {
+        width: 60%;
+      }
+
+      .Tuto-keyboard, Tuto-notes {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -219,9 +239,11 @@
 </body>
 </html>
 
-<!-- TODO:
-  + animation pop
- ++ better forms
-  + ambient sound
+<!-- TODO :
+ ++ mobile
+  + post prod : vignettage, vignetage sur frozen
+  + freez sound
+  + tuto always here from the begining
+  + tuto better look for dom keyboard
   - title reveal
 -->
