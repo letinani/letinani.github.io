@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
   <title>Letinani Christmas XP</title>
   <link rel="icon" href="favicon.ico" />
-  <style>
-       body,html{margin:0;padding:0;overflow:hidden;font-family:Arial,sans-serif;text-align:center;color:#171846}.Canvas{width:100%;height:100%}.Tuto{position:absolute;top:25%;width:100%;z-index:100;text-transform:uppercase;display:none}.Tuto-keyboard{display:inline-block;margin:10px;padding:10px 25px;background:#fff;border-radius:3px;position:relative;z-index:10}.TutoBtn,.TutoBtn span{position:absolute;left:50px}.Tuto-notes .Tuto-keyboard p{font-size:.6rem;padding:0;margin:0}.Tuto .is-pressed{background:rgba(255,255,255,.5)}.Tuto-title svg{width:500px;fill:#fff}.TutoBtn{z-index:5;top:50px;cursor:pointer}.TutoBtn:hover svg{fill:rgba(255,255,255,.8)}.TutoBtn svg{width:40px;fill:rgba(255,255,255,.4)}.TutoBtn span{color:#fff;display:block;font-size:.9rem;top:13px}.TutoBtn .TutoBtn-close{display:none}.TutoBtn--open .TutoBtn-close{display:block}.TutoBtn--open .TutoBtn-help{display:none}@media screen and (max-width:640px){.TutoBtn{display:none}.Tuto{display:block;position:absolute;top:5%;width:100%}.Tuto-title svg{width:60%}.Tuto-keyboard,Tuto-notes{display:none}}
-  </style>
+  <link rel="stylesheet" href="main.css" media="screen">
 </head>
 <body>
   <div class="Canvas">
@@ -32,10 +30,13 @@
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 489.2 244.4" style="enable-background:new 0 0 489.2 244.4;" xml:space="preserve">
   <style type="text/css">
-    .st0 {
-      fill: #FFFFFF;
-    }
+
   </style>
+  <defs>
+    <pattern id="snowPattern" patternUnits="userSpaceOnUse" width="1024" height="768">
+      <image xlink:href="./assets/textures/text.jpg" x="0" y="0" width="1024" height="768" />
+    </pattern>
+  </defs>
   <g>
     <path class="st0" d="M96.9,107.9c-6.8,0-11.4-5.2-11.4-15.2C85.5,74.2,127.4,0,134.3,0c29.4,0,8,52.6,8,52.6S180.9,0,200.3,0
 		c5.9,0,14.3,8.2,12.2,10.2c-8.9,8.9-52.9,72-52.9,96.8c0,12.6,5,6.2,6.6,7.7c0.8,1-0.4,3.1-4.6,3.1c-9.2,0-11.2-6.5-11.2-15.5
@@ -99,38 +100,39 @@
 </svg>
 
     </div>
-    <div class="Tuto-keyboard" data-id="0">
-      <span>Spacebar for random</span>
-    </div>
     <div class="Tuto-notes">
       <div class="Tuto-keyboard" data-id="1">
-        <p>1</p>
-        <p><strong>C / do</strong></p>
+        <div class="Tuto-key">1</div>
+        <span>C / do</span>
       </div>
       <div class="Tuto-keyboard" data-id="2">
-        <p>2</p>
-        <p><strong>D / re</strong></p>
+        <div class="Tuto-key">2</div>
+        <span>D / re</span>
       </div>
       <div class="Tuto-keyboard" data-id="3">
-        <p>3</p>
-        <p><strong>E / mi</strong></p>
+        <div class="Tuto-key">3</div>
+        <span>E / mi</span>
       </div>
       <div class="Tuto-keyboard" data-id="4">
-        <p>4</p>
-        <p><strong>F / fa</strong></p>
+        <div class="Tuto-key">4</div>
+        <span>F / fa</span>
       </div>
       <div class="Tuto-keyboard" data-id="5">
-        <p>5</p>
-        <p><strong>G / sol</strong></p>
+        <div class="Tuto-key">5</div>
+        <span>G / sol</span>
       </div>
       <div class="Tuto-keyboard" data-id="6">
-        <p>6</p>
-        <p><strong>A / la</strong></p>
+        <div class="Tuto-key">6</div>
+        <span>A / la</span>
       </div>
       <div class="Tuto-keyboard" data-id="7">
-        <p>7</p>
-        <p><strong>B / si</strong></p>
+        <div class="Tuto-key">7</div>
+        <span>B / si</span>
       </div>
+    </div>
+    <div class="Tuto-keyboard" data-id="0">
+      <div class="Tuto-key Tuto-key--spacebar">Spacebar</div>
+      <span>for random</span>
     </div>
   </div>
   <script src="index.js"></script>
@@ -138,10 +140,6 @@
 </html>
 
 <!-- TODO :
- ++ mobile
-  + post prod : vignettage, vignetage sur frozen
   + freez sound
-  + tuto always here from the begining
-  + tuto better look for dom keyboard
-  - title reveal
+  + optims week GPU
 -->
