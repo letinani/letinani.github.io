@@ -1,0 +1,22 @@
+{
+  "xps": [
+    {
+      "title": "Snowflake",
+      "description": "Make some music/noise building a snowflake",
+      "source": "",
+      "mobileFriendly": "1",
+      "vrFriendly": "0",
+			"name": "letinani",
+			"authors": [
+				{
+					"name": "Laetitia Nanni",
+					"description": "Wonder creative developer woman at Hellohikimori",
+					"twitter": "Laet_Nanni",
+					"website": "http://letinani.com",
+					"facebook": "",
+					"img": "letinani.jpg"
+				}
+			]
+    }
+  ]
+}
